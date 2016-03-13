@@ -1,0 +1,37 @@
+{
+  "name": "project-name",
+  "description": "",
+  "main": "bin/js/app.js",
+  "authors": [
+    "your name <your.mail@provider.com>"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/yourname/brunch-with-veggies",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "lodash": "~2",
+    "jquery": "~2",
+    "backbone": "~1",
+    "normalize-css": "~2",
+    "h5bp-helpers": "~0.1",
+    "font-awesome": "~4",
+    "console-polyfill": "~0.1.0"
+  },
+
+  "overrides": {
+    "backbone": {
+      "main": "backbone.js",
+      "dependencies": {
+        "lodash": "*",
+        "jquery": "*"
+      }
+    },
+    "font-awesome": {
+      "main": ["fonts", "css"]
+    }
+  }
+}
