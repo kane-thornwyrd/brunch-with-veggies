@@ -1,0 +1,21 @@
+class BaseModel extends Backbone.Model {
+
+  constructor(){
+    super();
+  }
+
+  fetch(options) {
+    this.trigger('fetch:start');
+    options = options ? _.clone(options) : {};
+    var success = options.success;
+    var model = this;
+    options.success = function() {
+      model.trigger('fetch:stop');
+      if (success) success();
+    };
+    super().fetch.apply(this, [options]);
+  }
+
+}
+
+export default BaseModel;
