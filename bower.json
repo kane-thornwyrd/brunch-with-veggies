@@ -21,7 +21,6 @@
     "font-awesome": "~4",
     "console-polyfill": "~0.1.0"
   },
-
   "overrides": {
     "backbone": {
       "main": "backbone.js",
@@ -31,7 +30,10 @@
       }
     },
     "font-awesome": {
-      "main": ["fonts", "css"]
+      "main": [
+        "fonts",
+        "css"
+      ]
     }
   }
 }

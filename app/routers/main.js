@@ -1,3 +1,5 @@
+import BaseView from '../views/base';
+
 class Router extends Backbone.Router {
   constructor(){
     super();
@@ -8,8 +10,9 @@ class Router extends Backbone.Router {
   }
 
   index(){
-    console.log('Index route');
+    console.log('INDEX');
+    var exempleView = new BaseView();
+    $('#app').html(exempleView.render());
   }
 }
-console.log(Router);
 export default Router ;
